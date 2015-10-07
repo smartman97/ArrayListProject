@@ -1,6 +1,7 @@
 package lists.controller;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class ArrayListController
 {
@@ -14,6 +15,15 @@ public class ArrayListController
 	public void start()
 	{
 		firstWords.add("lol");
-		System.out.println(firstWords);
+		firstWords.add("swag");
+		showList();
+	}
+	
+	private void showList()
+	{
+		for(int spot = 0; spot < firstWords.size(); spot++)
+		{
+			JOptionPane.showMessageDialog(null, firstWords.get(spot) + " is at spot #" + spot);
+		}
 	}
 }
